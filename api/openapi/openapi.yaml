@@ -1,0 +1,112 @@
+openapi: 3.1.0
+info:
+  title: Digital Democracy API
+  version: 0.0.1
+  summary: The public API of the Digital Democracy platform.
+  description: |
+    Every use case of the platform exists first as an endpoint documented here;
+    the web app, the mobile apps and the official MCP server for AI agents are
+    all clients of this API. See ADR-0005 in the docs repository.
+
+    This is the Phase 1 skeleton. Only meta endpoints exist.
+  license:
+    name: AGPL-3.0-or-later
+    identifier: AGPL-3.0-or-later
+  contact:
+    name: Digital Democracy
+    url: https://github.com/digitaldemocracy-app/platform
+
+servers:
+  - url: https://api.digitaldemocracy.app
+    description: Production (not live yet)
+  - url: http://localhost:8080
+    description: Local development
+
+security: []
+
+tags:
+  - name: meta
+    description: Service information, health and the API contract itself.
+
+paths:
+  /:
+    get:
+      operationId: getHello
+      tags: [meta]
+      summary: Hello
+      description: Identifies the service and points to the documentation.
+      responses:
+        "200":
+          description: Service identity.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Hello"
+
+  /healthz:
+    get:
+      operationId: getHealth
+      tags: [meta]
+      summary: Liveness check
+      description: Returns 200 when the process is up. Used by the load balancer and the deploy pipeline.
+      responses:
+        "200":
+          description: The service is alive.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Health"
+
+  /openapi.yaml:
+    get:
+      operationId: getOpenAPI
+      tags: [meta]
+      summary: This document
+      description: The OpenAPI contract served by the running version, so clients can always fetch the contract they are talking to.
+      responses:
+        "200":
+          description: The OpenAPI 3.1 document.
+          content:
+            application/yaml:
+              schema:
+                type: string
+
+components:
+  schemas:
+    Hello:
+      type: object
+      required: [name, message, docs, openapi]
+      properties:
+        name:
+          type: string
+          examples: [digital-democracy-api]
+        message:
+          type: string
+        docs:
+          type: string
+          format: uri
+        openapi:
+          type: string
+          description: Path of the OpenAPI document on this server.
+
+    Health:
+      type: object
+      required: [status, service, version]
+      properties:
+        status:
+          type: string
+          enum: [ok]
+        service:
+          type: string
+        version:
+          type: string
+          examples: ["0.0.1-dev"]
+
+  securitySchemes:
+    bearerToken:
+      type: http
+      scheme: bearer
+      description: |
+        Personal access tokens and agent tokens (ADR-0005). Tokens carry fine
+        scopes (read, debate, propose, delegate, vote) and are revocable at any
+        time by their owner. Not used by any endpoint yet.
