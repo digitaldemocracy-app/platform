@@ -4,7 +4,7 @@ Thank you. This project is maintained by one volunteer; answers come within seve
 
 ## Before you start
 
-- **What** the platform should do is decided in the [docs](https://github.com/digitaldemocracy-app/docs) repository (product, requirements, ADRs). **How** it is built is decided here. If your change alters a decision, open an issue there first or propose a new ADR.
+- **What** the platform should do is decided in the docs repository (product, requirements, ADRs). **How** it is built is decided here. If your change alters a decision, open an issue there first or propose a new ADR.
 - Read the [Manifesto](https://github.com/digitaldemocracy-app/manifesto) principles. Code that weakens vote secrecy, verifiability, the ledger, or "each person exists once" will not be merged, however good it is.
 - Look for issues labelled `good first issue` and `help wanted`.
 
