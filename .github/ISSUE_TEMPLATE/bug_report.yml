@@ -1,0 +1,32 @@
+name: Bug report
+description: Something in the code or the running platform does not behave as documented.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks. Any language is fine. If this is a security issue, stop here and use the private report link instead.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - api
+        - web
+        - mcp
+        - infra
+        - ci / repository
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, what you saw. Logs and screenshots help; redact personal data.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      placeholder: e.g. 0.0.1 or a commit SHA

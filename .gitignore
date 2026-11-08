@@ -1,0 +1,32 @@
+# Secrets and local configuration — never committed. See docs/CONTRIBUTING.md.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.age
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Go
+api/bin/
+api/dist/
+*.test
+*.out
+coverage.*
+
+# Node (web/, mcp/ if TypeScript)
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+npm-debug.log*
+
+# Local infra state
+infra/data/
