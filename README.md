@@ -5,9 +5,11 @@
 
 The source code of the Digital Democracy platform: an open, global platform for constructive debate, secret and verifiable voting, and democratic participation. Public from the first commit.
 
-The [Manifesto](https://github.com/digitaldemocracy-app/manifesto) says *why*. The [docs](https://github.com/digitaldemocracy-app/docs) repository says *what* (product, requirements, roadmap) and records *how* (architecture decisions). This repository is the *how*, in code.
+The [Manifesto](https://github.com/digitaldemocracy-app/manifesto) says *why*. The docs repository says *what* (product, requirements, roadmap) and records *how* (architecture decisions). This repository is the *how*, in code.
 
-**Status: Phase 1 — Foundations.** There is no product here yet: this is the skeleton (structure, contracts, CI, licence) on which Phase 2 starts. See the [roadmap](https://github.com/digitaldemocracy-app/docs/blob/main/ROADMAP.md).
+_The docs repository (product vision, requirements and architecture decisions) is being finalized and will open soon; until then, references to it below are plain text._
+
+**Status: Phase 1 — Foundations.** There is no product here yet: this is the skeleton (structure, contracts, CI, licence) on which Phase 2 starts. See the roadmap.
 
 ## Structure
 
@@ -21,11 +23,11 @@ The [Manifesto](https://github.com/digitaldemocracy-app/manifesto) says *why*. T
 
 Design rules that shape this layout (each is an ADR in the docs repository):
 
-- **API-first.** The OpenAPI document ([`api/openapi/openapi.yaml`](api/openapi/openapi.yaml)) is the contract; web, mobile and agents are clients. [ADR-0005](https://github.com/digitaldemocracy-app/docs/blob/main/adr/0005-api-first-and-ai-agents.md)
-- **Secret, verifiable, receipt-free voting.** [ADR-0003](https://github.com/digitaldemocracy-app/docs/blob/main/adr/0003-secret-verifiable-voting.md)
-- **Append-only public ledger; nothing erased in silence.** [ADR-0004](https://github.com/digitaldemocracy-app/docs/blob/main/adr/0004-public-ledger.md)
-- **Identity by verification levels; each person exists once.** [ADR-0007](https://github.com/digitaldemocracy-app/docs/blob/main/adr/0007-identity-and-verification-levels.md)
-- Stack, monorepo and infrastructure: [ADR-0001](https://github.com/digitaldemocracy-app/docs/blob/main/adr/0001-technology-stack.md), [ADR-0002](https://github.com/digitaldemocracy-app/docs/blob/main/adr/0002-monorepo-structure.md), [ADR-0006](https://github.com/digitaldemocracy-app/docs/blob/main/adr/0006-infrastructure-and-costs.md)
+- **API-first.** The OpenAPI document ([`api/openapi/openapi.yaml`](api/openapi/openapi.yaml)) is the contract; web, mobile and agents are clients. ADR-0005
+- **Secret, verifiable, receipt-free voting.** ADR-0003
+- **Append-only public ledger; nothing erased in silence.** ADR-0004
+- **Identity by verification levels; each person exists once.** ADR-0007
+- Stack, monorepo and infrastructure: ADR-0001, ADR-0002, ADR-0006
 
 ## Run it
 

@@ -2,7 +2,7 @@
 
 People will give an AI agent a token to operate the platform on their behalf, under their own rules. This directory will hold the official [Model Context Protocol](https://modelcontextprotocol.io/) server that exposes the public API to such agents.
 
-Decisions already taken ([ADR-0005](https://github.com/digitaldemocracy-app/docs/blob/main/adr/0005-api-first-and-ai-agents.md)):
+Decisions already taken (ADR-0005):
 
 - The MCP server is a **thin client of the public API**: no privileged path, no logic of its own. Anything an agent can do through MCP, a human can do through the same endpoints.
 - Written in **Go** with the official MCP Go SDK; transports: Streamable HTTP (hosted at `mcp.digitaldemocracy.app`) and stdio (local).

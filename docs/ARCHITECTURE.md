@@ -1,6 +1,6 @@
 # Architecture (overview)
 
-Decisions are recorded as ADRs in the docs repository: <https://github.com/digitaldemocracy-app/docs/tree/main/adr>. This page is the map.
+Decisions are recorded as ADRs in the docs repository: the docs repository (opening soon). This page is the map.
 
 ```
             people                      AI agents (with a person's scoped token)

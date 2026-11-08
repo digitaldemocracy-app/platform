@@ -1,6 +1,6 @@
 # infra
 
-Local development stack and, later, the deployment definitions. The decision record is [ADR-0006 — Infrastructure and costs](https://github.com/digitaldemocracy-app/docs/blob/main/adr/0006-infrastructure-and-costs.md).
+Local development stack and, later, the deployment definitions. The decision record is ADR-0006 — Infrastructure and costs.
 
 ## Local
 
